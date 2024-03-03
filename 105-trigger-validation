@@ -1,0 +1,17 @@
+public void validateInsert(List<Opportunity> opportunities){
+    Trigger OpportunityTrigger on Opportunity (before insert){ 
+    if (Trigger.isBefore && Trigger.isinsert){ 
+        OpportunityTriggerHandler handler = 
+            new OpportunityTriggerHandler(); 
+        List<Opportunity> opportunities = 
+            handler.validateInsert(Trigger.new);
+    }
+
+    for Opportunity opp : opportunities{
+        if(opp.StageName=='Closed Won' && (opp.Description = null ||  !opp.Description.isEmpty()){
+            opp.Description.addErrormsg('Description should not be empty for Closed Won opportunity.');
+            insert opp;
+        }
+    }
+}
+}
