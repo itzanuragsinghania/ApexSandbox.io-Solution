@@ -3,13 +3,13 @@ public Boolean isKeyAccount(Account a) {
     if(a.Industry == 'Banking' && a.AnnualRevenue == 600,000){
         return True;
     }
-    if(a.Industry == 'Technology' && a.AnnualRevenue == 800,000 ){
+    else if(a.Industry == 'Technology' && a.AnnualRevenue == 800,000 ){
         return True;
     }
-    if(a.Industry == 'Retail' && a.AnnualRevenue == 2,000,000 ){
+    else if(a.Industry == 'Retail' && a.AnnualRevenue == 2,000,000 ){
         return True;
     }
-    if(a.Industry == 'All others' && a.AnnualRevenue ==  500,000){
+    else if(a.Industry == 'All others' && a.AnnualRevenue ==  500,000){
         return True;
     }
     else{
