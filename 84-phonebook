@@ -1,0 +1,9 @@
+public Map<String, String> phonebook(List<Contact> contacts) {
+    //code here
+    Map<String,String> conRecords = new Map<String,String>();
+    if(!contacts.Phone.isEmpty()){
+        conRecords(contacts.FullName,contacts.Phone);
+        return conRecords;
+    }
+    
+}
