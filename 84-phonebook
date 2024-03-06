@@ -4,8 +4,9 @@ public Map<String, String> phonebook(List<Contact> contacts) {
     for(Contact con: contacts){
         if(!con.Phone.isEmpty()){
             conRecords.put(con.FullName,con.Phone);
-            return conRecords;
+            
         }
     }
+    return conRecords;
     
 }
